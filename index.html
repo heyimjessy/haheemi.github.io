@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HaHeeMi Studio - Creative Development & Production</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#home" class="logo">
+                <img src="assets/website_logo.png" alt="HaHeeMi" class="logo-image">
+                <span class="logo-text">HaHeeMi</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#music">Music</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-bg"></div>
+        <div class="floating-notes">
+            <span class="note">♪</span>
+            <span class="note">🎮</span>
+            <span class="note">♫</span>
+            <span class="note">🕹️</span>
+            <span class="note">♪</span>
+            <span class="note">🎯</span>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">Innovation Through Creativity</h1>
+            <p class="hero-subtitle">An AI-powered creative studio crafting music, immersive games, and intelligent applications</p>
+            <div class="hero-cta-group">
+                <a href="#music" class="cta-button cta-primary">Explore Our Work</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-badge">
+                    <span class="stat-icon">🎵</span>
+                    <span class="stat-text">Lofi Hip Hop Music Producer</span>
+                </div>
+                <div class="stat-badge">
+                    <span class="stat-icon">🎨</span>
+                    <span class="stat-text">Celebrity Featured Artist</span>
+                </div>
+                <div class="stat-badge">
+                    <span class="stat-icon">💬</span>
+                    <span class="stat-text">Official LINE Creator</span>
+                </div>
+                <div class="stat-badge">
+                    <span class="stat-icon">📱</span>
+                    <span class="stat-text">Published App Developer</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <div class="scroll-arrow">↓</div>
+        </div>
+    </section>
+
+    <section id="youtube" class="about">
+        <div class="container">
+            <h2 class="section-title">YouTube Channel</h2>
+            <div class="youtube-content">
+                <div class="youtube-embed">
+                    <a href="https://www.youtube.com/watch?v=3zkfMvjdMKM" target="_blank" rel="noopener noreferrer" class="video-thumbnail">
+                        <img src="https://i.ytimg.com/vi/3zkfMvjdMKM/hqdefault.jpg" alt="YouTube Video Thumbnail">
+                        <div class="play-button">
+                            <svg width="68" height="48" viewBox="0 0 68 48" fill="none">
+                                <path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z" fill="red"/>
+                                <path d="M45 24L27 14v20" fill="white"/>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+                <div class="youtube-info">
+                    <h3>Most Popular Video</h3>
+                    <p>Experience our most loved lofi hip hop mix - perfect morning vibes with coffee and breakfast beats. Join our growing community discovering calm, focus-enhancing music.</p>
+                    <div class="channel-stats">
+                        <div class="stat">
+                            <span class="stat-number">1,000+</span>
+                            <span class="stat-label">Subscribers</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">100K</span>
+                            <span class="stat-label">Total Views</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">100+</span>
+                            <span class="stat-label">Videos</span>
+                        </div>
+                    </div>
+                    <a href="https://www.youtube.com/@haheemiaistudio" target="_blank" rel="noopener noreferrer" class="subscribe-button">Subscribe on YouTube</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="music" class="music">
+        <div class="container">
+            <h2 class="section-title">Latest Releases</h2>
+            <div class="music-grid">
+                <div class="music-card" onclick="this.classList.add('flipping'); this.classList.toggle('show-player'); setTimeout(() => this.classList.remove('flipping'), 300);">
+                    <div class="album-art sunday-chill-cover">
+                        <img src="https://m.media-amazon.com/images/I/414cVzcuwGL._UX358_FMwebp_QL85_.jpg" alt="Sunday Chill Mood Album Cover">
+                    </div>
+                    <h3>Sunday Chill Mood</h3>
+                    <p class="release-info">Album · 2024</p>
+                    <p class="track-count">5 tracks of relaxing lofi beats</p>
+                    <div class="embedded-player">
+                        <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/sunday-chill-mood-lo-fi-album-ep/1762986992"></iframe>
+                    </div>
+                </div>
+                <div class="music-card" onclick="this.classList.add('flipping'); this.classList.toggle('show-player'); setTimeout(() => this.classList.remove('flipping'), 300);">
+                    <div class="album-art when-i-am-gone-cover">
+                        <img src="https://m.media-amazon.com/images/I/51kYc+m5+aL._UX358_FMwebp_QL85_.jpg" alt="When I Am Gone Album Cover">
+                    </div>
+                    <h3>When I Am Gone</h3>
+                    <p class="release-info">Single · 2025</p>
+                    <p class="track-count">Perfect for chill afternoons</p>
+                    <div class="embedded-player">
+                        <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/when-i-am-gone-single/1789990756"></iframe>
+                    </div>
+                </div>
+                <div class="music-card" onclick="this.classList.add('flipping'); this.classList.toggle('show-player'); setTimeout(() => this.classList.remove('flipping'), 300);">
+                    <div class="album-art true-ambition-cover">
+                        <img src="https://m.media-amazon.com/images/I/51IXLLDRtRL._UX358_FMwebp_QL85_.jpg" alt="True Ambition Album Cover">
+                    </div>
+                    <h3>True Ambition</h3>
+                    <p class="release-info">Single · 2024</p>
+                    <p class="track-count">Single track to inspire ambition</p>
+                    <div class="embedded-player">
+                        <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/true-ambition-single/1789978379"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="featured" class="featured">
+        <div class="container">
+            <h2 class="section-title">Featured Work</h2>
+            <p class="section-subtitle">Our creative work recognized across platforms and publications</p>
+            <div class="featured-grid">
+                <div class="featured-card">
+                    <div class="featured-icon">🎨</div>
+                    <h3>TTShow Featured Artist</h3>
+                    <p>Selected as featured artist on TTShow (DaRenXiu) platform with multiple artworks showcased to Taiwanese audiences.</p>
+                </div>
+                <div class="featured-card">
+                    <div class="featured-icon">💬</div>
+                    <h3>LINE Sticker Collection</h3>
+                    <p>Released a sticker collection on LINE, bringing creative characters and expressions to messaging platforms, with more collections coming soon.</p>
+                </div>
+                <div class="featured-card">
+                    <div class="featured-icon">📱</div>
+                    <h3>YouTube Shorts, Bilibili & Weibo</h3>
+                    <p>Art and music used by creators on YouTube Shorts, Bilibili, and Weibo, contributing to viral content and creative projects across multiple platforms.</p>
+                </div>
+                <div class="featured-card">
+                    <div class="featured-icon">📖</div>
+                    <h3>Celebrity Fan Art Book Cover</h3>
+                    <p>Illustration selected as cover design for celebrity fan art book, bringing visual artistry to published collections.</p>
+                </div>
+                <div class="featured-card">
+                    <div class="featured-icon">⭐</div>
+                    <h3>Celebrity Recognition</h3>
+                    <p>Work reposted and endorsed by celebrities, gaining exposure to wider audiences and creative communities.</p>
+                </div>
+                <div class="featured-card">
+                    <div class="featured-icon">🛍️</div>
+                    <h3>Google Play Store</h3>
+                    <p>Multiple applications developed and published on Google Play Store, delivering tools and experiences to mobile users.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Coming Soon</h2>
+            <p class="section-subtitle">Exploring creative development in games and applications</p>
+            <div class="projects-grid">
+                <div class="project-card game-dev-card">
+                    <h3>Game Development</h3>
+                    <p>Delivering innovative gameplay through AI-enhanced content and development.</p>
+                </div>
+                <div class="project-card app-dev-card">
+                    <h3>App Development</h3>
+                    <p>Building productivity and creative tools that integrate seamlessly with our music ecosystem.</p>
+                </div>
+                <div class="project-card ai-experiment-card">
+                    <h3>AI Experiments</h3>
+                    <p>Pushing boundaries with artificial intelligence in music generation, game design, and interactive experiences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">About HaHeeMi</h2>
+                    <p>HaHeeMi is a creative studio exploring the playful side of AI-powered creation. What started as a self-taught journey in illustration—publishing art collections, designing game assets, line stickers, and book covers, it has evolved into building experiences that bring joy and creativity to the public. </p>
+                    <p>From our AI-generated lofi hip hop music to interactive games and digital experiences, we combine human imagination with generative AI to craft fun, engaging, and original content in our way.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-number">2015</span>
+                            <span class="stat-label">Established</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">200+</span>
+                            <span class="stat-label">Releases</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">Indie</span>
+                            <span class="stat-label">Artist</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <img src="assets/website_logo.png" alt="HaHeeMi AI Studio Logo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>HaHeeMi AI Studio</h3>
+                    <p>Creating lofi music and innovative digital experiences through AI and creativity.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#music">Music</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="https://www.youtube.com/@haheemiaistudio" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+                        <li><a href="https://music.apple.com/us/artist/haheemi-lofi-music/1762863763" target="_blank" rel="noopener noreferrer">Apple Music</a></li>
+                        <li><a href="https://open.spotify.com/artist/1PXxkghnHHBpS6qgGRJuGk" target="_blank" rel="noopener noreferrer">Spotify</a></li>
+                        <li><a href="https://music.amazon.in/artists/B0DC5PRH2W/haheemi-lofi-music" target="_blank" rel="noopener noreferrer">Amazon Music</a></li>
+                        <li><a href="https://www.instagram.com/haheemiaistudio/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 HaHeeMi AI Studio. All rights reserved.</p>
+                <p class="creator">Created by Jessica Ng</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
