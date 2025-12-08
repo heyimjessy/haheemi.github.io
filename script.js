@@ -29,9 +29,18 @@ menuToggle.addEventListener('click', () => {
     navLinks.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.1)';
 });
 
+// Reset nav styles when resizing to desktop to avoid hidden menu
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+        navLinks.removeAttribute('style');
+    }
+});
+
 // Navbar background on scroll
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
+    const scrollIndicator = document.querySelector('.scroll-indicator');
+    
     if (window.scrollY > 50) {
         navbar.style.background = 'rgba(255, 255, 255, 0.98)';
         navbar.style.boxShadow = '0 2px 15px rgba(0, 0, 0, 0.1)';
@@ -39,9 +48,16 @@ window.addEventListener('scroll', () => {
         navbar.style.background = 'rgba(255, 255, 255, 0.95)';
         navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.05)';
     }
+    
+    // Fade scroll indicator based on scroll position
+    if (scrollIndicator) {
+        const heroHeight = window.innerHeight;
+        const scrollProgress = window.scrollY / (heroHeight * 0.8);
+        const opacity = Math.max(0, 1 - scrollProgress);
+        scrollIndicator.style.opacity = opacity;
+        scrollIndicator.style.pointerEvents = opacity > 0 ? 'auto' : 'none';
+    }
 });
-
-// Form submission handler (removed as no longer needed)
 
 // Intersection Observer for fade-in animations
 const observerOptions = {
@@ -87,3 +103,15 @@ window.addEventListener('scroll', () => {
         heroBg.style.transform = `translateY(${scrolled * 0.5}px)`;
     }
 });
+
+// Newsletter form handler
+const newsletterForm = document.querySelector('.newsletter-form');
+if (newsletterForm) {
+    newsletterForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const emailInput = newsletterForm.querySelector('.newsletter-input');
+        if (emailInput.value.trim() !== '') {
+            newsletterForm.innerHTML = '<p style="color: var(--accent-color); font-weight: 600;">Thank you for subscribing!</p>';
+        }
+    });
+}
