@@ -1075,13 +1075,13 @@ section:first-of-type::before {
 
 .stickers-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
 
 .sticker-card {
     background: var(--primary-color);
-    padding: 2.5rem 2rem;
+    padding: 1.2rem 1rem;
     border-radius: 12px;
     border: 1px solid var(--border-color);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
