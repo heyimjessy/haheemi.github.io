@@ -1074,9 +1074,22 @@ section:first-of-type::before {
 }
 
 .stickers-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+}
+
+@media (max-width: 900px) {
+    .stickers-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .stickers-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
 }
 
 .sticker-card {
@@ -1697,8 +1710,54 @@ section:first-of-type::before {
 .footer-newsletter {
     text-align: center;
     margin-bottom: 2.5rem;
+    padding: 2.5rem 1.5rem 2rem 1.5rem;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.newsletter-input {
+    padding: 0.85rem 1.3rem;
+    border: 1.5px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    background: #fff;
+    color: var(--text-color);
+    transition: border-color 0.2s, box-shadow 0.2s;
+    width: 100%;
+    max-width: 220px;
+    box-shadow: 0 2px 8px rgba(0,212,255,0.04);
+}
+.newsletter-input:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 2px var(--glow-color);
+}
+
+.newsletter-form .outline-button {
+    /* No longer used, replaced by .cta-button .cta-primary */
+}
+.newsletter-form .cta-button.cta-primary {
+    /* Use only .cta-button styles for consistency */
+    margin-left: 0.2rem;
+}
+.newsletter-form .cta-button.cta-primary:hover {
+    /* Use only .cta-button:hover styles for consistency */
+}
+
+.newsletter-form .outline-button:hover {
+    filter: brightness(1.08);
+    box-shadow: 0 4px 16px rgba(0,212,255,0.13);
+}
 .footer-newsletter p {
     color: var(--text-secondary);
     margin-bottom: 1rem;
@@ -1716,6 +1775,9 @@ section:first-of-type::before {
     grid-template-columns: 2fr 1fr 1fr 1fr;
     gap: 3rem;
     margin-bottom: 3rem;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .footer-section h3 {
@@ -1760,13 +1822,31 @@ section:first-of-type::before {
 }
 
 .footer-bottom {
-    padding-top: 2rem;
-    border-top: 1px solid var(--border-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
+        padding-top: 2rem;
+        border-top: 1px solid var(--border-color);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        max-width: 1100px;
+        margin-left: auto;
+        margin-right: auto;
+}
+
+@media (max-width: 600px) {
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    .footer-bottom p,
+    .footer-bottom .creator {
+        width: 100%;
+        text-align: center;
+    }
+}
 }
 
 .footer-bottom p {
@@ -1942,10 +2022,32 @@ section:first-of-type::before {
         grid-template-columns: 1fr;
         gap: 2rem;
         order: 1;
+        max-width: 480px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footer-section {
+        text-align: center;
     }
 
     .footer-section:first-child {
         order: -1;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0.5rem;
+        max-width: 480px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .footer-bottom p,
+    .footer-bottom .creator {
+        width: 100%;
+        text-align: center;
     }
 
     .section-title {
