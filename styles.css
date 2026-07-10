@@ -1847,7 +1847,7 @@ section:first-of-type::before {
         text-align: center;
     }
 }
-}
+
 
 .footer-bottom p {
     color: var(--text-secondary);
